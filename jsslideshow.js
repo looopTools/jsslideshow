@@ -1,6 +1,10 @@
 $(function(){
    // alert("TEST")
     var number_of_slides = -1;
+    var current_slide = 0;
+    $("#fwd_btn").click(function(){
+	switch_slid_fwd(current_slide);
+    });
     $( "#dialog-message" ).dialog({
 	modal: true,
 	buttons: {
@@ -34,7 +38,14 @@ function hide_all_but_first(input){
 }
 
 function switch_slid_fwd(input){
-    $("#slide"+i).hide();
-    $("#slide"+(i+1).show());
+    alert("slide" + input);
+    $("#slide"+input).hide(); 
+    alert("deo");
+    input++;    
+    alert(input);
+    $("#slide"+input).show();
+    alert("deo");
+
 }
+
 
